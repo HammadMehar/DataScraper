@@ -19,9 +19,7 @@ namespace DataScraper
             
             InitializeComponent();
         }
-
         
-
         private void clickMe_Click(object sender, EventArgs e)
         {
             DateTime date = DateTime.Today;
@@ -64,7 +62,7 @@ namespace DataScraper
             saNames[0, 1] = Metascore;
             saNames[0, 2]= date.ToString("dd/MM/yyyy");
             
-            saNames[1, 2] = date.ToString("dd/MM/yyyy");
+           
 
             //Fill A2:B6 with an array of values (First and Last Names).
             oSheet.get_Range("A2", "C6").Value2 = saNames;
@@ -72,9 +70,6 @@ namespace DataScraper
             oWB.SaveAs("test505.xls", Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookDefault, Type.Missing, Type.Missing,
                 false, false, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlNoChange,
                 Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-            
-            
-            
         }
 
         private void Form1_Load(object sender, EventArgs e)
